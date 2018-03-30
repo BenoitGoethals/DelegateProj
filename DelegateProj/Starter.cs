@@ -13,14 +13,23 @@ namespace DelegateProj
         {
             Calculator calculator=new Calculator();
             calculator.SetCalulate(Calculator.PlusMultiPly);
-            calculator.SetCalulate(Calculator.PlusCal);
-            int res = calculator.GetResult(12,12,12);
+            int res = calculator.GetResult(12, 3, 122);
             Console.WriteLine(res);
+
+            calculator.SetCalulate(Calculator.PlusCal);
+             res = calculator.GetResult(12,3,122);
+            Console.WriteLine(res);
+         
             calculator.SetCalulate(k => k.Max());
+            res = calculator.GetResult(12, 3, 122);
+            Console.WriteLine(res);
+
+            calculator.SetCalulate(calculate: new Calculate(z=>z.Min()));
+            res = calculator.GetResult(12, 3, 122);
             Console.WriteLine(res);
 
            
-            Console.WriteLine(calculator.GetResult(12, 12, 12));
+          
 
             Console.ReadLine();
         }

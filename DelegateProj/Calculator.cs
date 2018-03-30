@@ -20,7 +20,7 @@ namespace DelegateProj
 
         public void SetCalulate(Calculate calculate)
         {
-            this._calculate += calculate;
+            this._calculate = calculate;
         }
 
 
@@ -32,13 +32,13 @@ namespace DelegateProj
 
         public static int PlusCal(params int[] nums)
         {
-
+            Console.WriteLine("PlusCal");
             return nums.Sum();
         }
 
         public static int PlusMultiPly(params int[] nums)
         {
-
+            Console.WriteLine("PlusMultiPly");
        
             int ret = 0;
             foreach (var vNum in nums)
